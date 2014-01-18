@@ -1,0 +1,23 @@
+Source: ledger
+Section: utils
+Priority: optional
+Maintainer: Matt Palmer <mpalmer@debian.org>
+Uploaders: David Bremner <bremner@debian.org>
+Build-Depends: debhelper (>= 8), cmake, libgmp3-dev, libpcre3-dev,
+	libexpat1-dev, libofx-dev, libmpfr-dev, libboost-regex-dev,
+	libboost-date-time-dev, libboost-filesystem-dev,
+	libboost-iostreams-dev, libboost-serialization-dev,
+	libboost-test-dev, man2html-base, python, texinfo, texlive
+Standards-Version: 3.9.3
+Homepage: http://ledger-cli.org
+Vcs-Git: git://anonscm.debian.org/git/collab-maint/ledger.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/ledger.git;a=summary
+
+Package: ledger
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: command-line double-entry accounting program
+ Ledger is a powerful and flexible double-entry accounting system run
+ entirely from the command line.  Your accounts ledger is stored in one or
+ more plain-text files with a very simple and readable format, and ledger
+ does the hard work of balancing your books and reporting.

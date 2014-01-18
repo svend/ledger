@@ -1,0 +1,31 @@
+
+1) Getting the git repo setup. 
+
+   Upstream uses a git submodule for lib/utfcpp, so we do to.  After
+   you get the repo cloned
+   
+   % git submodule init
+   % git submodule update
+
+2) Making a snapshot tarball
+
+   The process of making a snapshot tarball from the branch 'upstream'
+   is automated via
+
+   % ./debian/rules get-orig-source
+
+3) Updating the changelog.
+
+   Of course you can do this by hand, but 
+
+   % ./debian/rules dch-snapshot
+
+   Will start a new entry with an version that matches the tarball created at (2)
+
+4) Updating the upstream branch
+
+   % git checkout upstream
+   % git fetch git://github.com/jwiegley/ledger.git
+   % git merge FETCH_HEAD
+
+ -- David Bremner <bremner@debian.org>, Mon,  4 Mar 2013 22:35:06 -0400

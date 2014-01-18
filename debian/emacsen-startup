@@ -1,0 +1,9 @@
+;;; 50ledger.el -- debian emacs setups for ledger. -*- mode: emacs-lisp -*-
+
+(if (not (file-exists-p "/usr/share/emacs/site-lisp/ldg-new.el"))
+    (message "ledger removed but not purged, skipping setup")
+
+  ;; Work around bug in 4810da9 (ledger bugzilla #910)
+  (eval-after-load "ldg-new" '(require 'esh-util))
+  ;; per autoload cookie in ldg-mode.el
+  (autoload 'ledger-mode "ldg-new" "A mode for editing ledger data files." t))

@@ -1,3 +1,9 @@
+ledger (3.0.0~20140113+0ed6b0f-1) experimental; urgency=low
+
+  * Updated git snapshot for experimental.
+
+ -- Svend Sorensen <svend@ciffer.net>  Sat, 18 Jan 2014 17:55:22 -0800
+
 ledger (3.0.0~20130313+b608ed2-1) experimental; urgency=low
 
   * Updated git snapshot for experimental.
